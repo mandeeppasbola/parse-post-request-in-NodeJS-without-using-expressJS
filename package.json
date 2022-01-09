@@ -1,0 +1,19 @@
+{
+  "name": "parse-post-request-in-nodejs-without-using-expressjs",
+  "version": "1.0.0",
+  "description": "Parse the POST request body in NodeJS without using ExpressJS body-parser by collecting and converting Buffer data into readable and accessible data format.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mandeeppasbola/parse-post-request-in-NodeJS-without-using-expressJS.git"
+  },
+  "author": "FrontendGuruji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mandeeppasbola/parse-post-request-in-NodeJS-without-using-expressJS/issues"
+  },
+  "homepage": "https://github.com/mandeeppasbola/parse-post-request-in-NodeJS-without-using-expressJS#readme"
+}
