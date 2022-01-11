@@ -1,5 +1,4 @@
 const http = require("http");
-const qs = require("querystring");
 
 const server = http.createServer((request, response) => {
   // custom body-parser for POST request starts
