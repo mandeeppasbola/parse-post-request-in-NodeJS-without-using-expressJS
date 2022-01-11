@@ -2,19 +2,31 @@ const http = require("http");
 const qs = require("querystring");
 
 const server = http.createServer((request, response) => {
-  const chunks = [];
+  // custom body-parser for POST request starts
+  // http request object is a readable stream,
+  // i.e. data arrives in parts/chunks.
+
+  let chunks = [];
+  // 'data' event is emitted on every chunk received
   request.on("data", (chunk) => {
+    // collecting the chunks in array
     chunks.push(chunk);
   });
+
+  // when all chunks are received, 'end' event is emitted.
   request.on("end", () => {
-    console.log("all parts/chunks have arrived");
+    // joining all the chunks received
     const data = Buffer.concat(chunks);
-    console.log("Data: ", data);
-    const stringData = data.toString();
-    console.log("stringData: ", stringData);
-    const parsedData = qs.parse(stringData);
-    console.log("parsedData: ", parsedData);
+    // data.toString() converts Buffer data to querystring format
+    // URLSearchParams: takes querystring
+    // & returns data in Object format
+    const parsedData = new URLSearchParams(data.toString());
+    console.log(parsedData);
+    // Now request data is accessible using parsedData
+
+    response.end();
   });
+  // custom body-parser for POST request ends
 });
 
 server.listen(9000, () => {
