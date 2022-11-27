@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/mandeeppasbola/parse-post-request-in-NodeJS-without-using-expressJS/issues"
   },
-  "homepage": "https://github.com/mandeeppasbola/parse-post-request-in-NodeJS-without-using-expressJS#readme"
+  "homepage": "https://github.com/mandeeppasbola/parse-post-request-in-NodeJS-without-using-expressJS#readme",
+  "type": "module"
 }
